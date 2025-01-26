@@ -1,0 +1,140 @@
+himanshu@himanshu:~/Ai/label-studio$ cat user_history.txt
+    1  python -V
+    2  python3 -V
+    3  mkdir -p $HOME/local/src
+    4  cd $HOME/local/src
+    5  wget https://www.openssl.org/source/openssl-1.1.1w.tar.gz
+    6  tar -xvzf openssl-1.1.1w.tar.gz
+    7  cd openssl-1.1.1w
+    8  ./config --prefix=$HOME/local/openssl --openssldir=$HOME/local/openssl
+    9  make -j$(nproc)
+   10  make install
+   11  cd ~/Python-3.10.16
+   12  make clean
+   13  ./configure --prefix=$HOME/python-3.10.16 --with-openssl=$HOME/local/openssl
+   14  make -j$(nproc)
+   15  make install
+   16  python3 -c "import ssl; print(ssl.OPENSSL_VERSION)"
+   17  cd ~
+   18  mkdir -p $HOME/local/src
+   19  cd $HOME/local/src
+   20  wget https://www.openssl.org/source/openssl-1.1.1w.tar.gz
+   21  tar -xvzf openssl-1.1.1w.tar.gz
+   22  cd openssl-1.1.1w
+   23  ./config --prefix=$HOME/local/openssl --openssldir=$HOME/local/openssl
+   24  make -j$(nproc)
+   25  make install
+   26  cd ~/Python-3.10.16
+   27  make clean
+   28  ./configure --prefix=$HOME/python-3.10.16 --with-openssl=$HOME/local/openssl LDFLAGS="-Wl,-rpath=$HOME/local/openssl/lib" CPPFLAGS="-I$HOME/local/openssl/include" PKG_CONFIG_PATH="$HOME/local/openssl/lib/pkgconfig"
+   29  make -j$(nproc)
+   30  make install
+   31  python3 -c "import ssl; print(ssl.OPENSSL_VERSION)"
+   32  pip -V
+   33  pip install pandas
+   34  python -V
+   35  make -j$(nproc)
+   36  make install
+   37  python3 -c "import ssl; print(ssl.OPENSSL_VERSION)"
+   38  python -V
+   39  python3 -V
+   40  pip3 -V
+   41  pip -V
+   42  ls /home/himanshu/python-3.10.16/bin/
+   43  echo 'export PATH=$HOME/python-3.10.16/bin:$PATH' >> ~/.bashrc
+   44  source ~/.bashrc
+   45  python -V
+   46  pip -V
+   47  python -V
+   48  ln -s $HOME/python-3.10.16/bin/python3 $HOME/python-3.10.16/bin/python
+   49  ln -s $HOME/python-3.10.16/bin/pip3 $HOME/python-3.10.16/bin/pip
+   50  python -V
+   51  pip -V
+   52  pip install pandas
+   53  cd ~
+   54  cd Ml/
+   55  source myenv/bin/activate
+   56  pip install label-studio
+   57  label-studio
+   58  lable-studio
+   59  label-studio
+   60  mv ~/Ml/myenv/bin/label-studio ~/Ml/myenv/bin/label-studio-backup
+   61  clear
+   62  mv ~/Ml/myenv/bin/label-studio ~/Ml/myenv/bin/label-studio-backup
+   63  ls
+   64  cd myenv/
+   65  cd bin/
+   66  ls
+   67  mv ~/Ml/myenv/bin/label-studio ~/Ml/myenv/bin/label-studio-backup
+   68  pip install label-studio
+   69  which python
+   70  which pip
+   71  label-studio
+   72  ls
+   73  mv ~/Ml/myenv/bin/label-studio-backup ~/Ml/myenv/bin/label-studio-old
+   74  ls
+   75  rm -rf ~/Ml/myenv/bin/label-studio-backup
+   76  pip install label-studio
+   77  which label-studio
+   78  label-studio --version
+   79  ls ~/Ml/myenv/bin/label-studio
+   80  which python
+   81  python -m pip show label-studio
+   82  python -m label_studio
+   83  pip install --upgrade label-studio
+   84  ls /home/himanshu/Ml/myenv/bin/
+   85  ln -s /home/himanshu/Ml/myenv/lib/python3.10/site-packages/label_studio/cli.py /home/himanshu/Ml/myenv/bin/label-studio
+   86  chmod +x /home/himanshu/Ml/myenv/bin/label-studio
+   87  label-studio
+   88  ./label-studio-old
+   89  cd label-studio-old/
+   90  ls
+   91  pip uninstall label-studio
+   92  pip install label-studio
+   93  ls /home/himanshu/Ml/myenv/bin/
+   94  label-studio
+   95  cd ~
+   96  deactive
+   97  cd Ml/
+   98  cd myenv/bin/
+   99  deactivate
+  100  cd ~
+  101  mkdir AI
+  102  cd AI/
+  103  git clone https://github.com/HumanSignal/label-studio.git
+  104  cd label-studio
+  105  pip install poetry
+  106  poetry install
+  107  poetry run python label_studio/manage.py migrate
+  108  ls
+  109  git clone https://github.com/HumanSignal/label-studio.git
+  110  pip install -U label-studio
+  111  ls
+  112  label-studio
+  113  git clone https://github.com/HumanSignal/label-studio.git
+  114  df -h
+  115  pip -V
+  116  label-studio
+  117  cd ..
+  118  ls
+  119  cd M
+  120  cd Ml/
+  121  ls
+  122  cd ..
+  123  rm -rf ML
+  124  ls
+  125  rm -rf Ml/
+  126*
+  127  df -h
+  128  rm -rf AI/
+  129  ls
+  130  mkdir Ai
+  131  cd Ai/
+  132  git clone https://github.com/HumanSignal/label-studio.git
+  133  cd label-studio/
+  134  pip install poetry
+  135  poetry install
+  136  poetry run python label_studio/manage.py migrate
+  137  poetry run python label_studio/manage.py collectstatic
+  138  poetry run python label_studio/manage.py runserver
+  139  history > user_history.txt
