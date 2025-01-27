@@ -1,5 +1,4 @@
 import json
-import numpy as np
 from sklearn.metrics import cohen_kappa_score
 
 def flatten_annotations(annotations):
@@ -59,7 +58,21 @@ file1 = "pos_1.json"
 file2 = "pos_2.json"
 
 try:
-    kappa_score = calculate_cohen_kappa(file1, file2)
-    print(f"Cohen's kappa: {kappa_score}")
+    kappa = calculate_cohen_kappa(file1, file2)
+    print(f"Cohen's kappa: {kappa}")
 except ValueError as e:
     print(f"Error: {e}")
+
+if kappa < 0:
+    interpretation = "Poor agreement"
+elif kappa <= 0.20:
+    interpretation = "Slight agreement"
+elif kappa <= 0.40:
+    interpretation = "Fair agreement"
+elif kappa <= 0.60:
+    interpretation = "Moderate agreement"
+elif kappa <= 0.80:
+    interpretation = "Substantial agreement"
+else:
+    interpretation = "Almost perfect agreement"
+print(f"Cohen's Kappa: {kappa}, Interpretation: {interpretation}")

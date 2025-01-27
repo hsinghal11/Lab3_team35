@@ -55,6 +55,19 @@ def main():
     # Calculate Fleiss' Kappa
     kappa = fleiss_kappa(rating_matrix)
     print("Fleiss' Kappa:", kappa)
+    if kappa < 0:
+        interpretation = "Poor agreement"
+    elif kappa <= 0.20:
+        interpretation = "Slight agreement"
+    elif kappa <= 0.40:
+        interpretation = "Fair agreement"
+    elif kappa <= 0.60:
+        interpretation = "Moderate agreement"
+    elif kappa <= 0.80:
+        interpretation = "Substantial agreement"
+    else:
+        interpretation = "Almost perfect agreement"
+    print(f"Fleiss' Kappa: {kappa}, Interpretation: {interpretation}")
 
 if __name__ == "__main__":
     main()
